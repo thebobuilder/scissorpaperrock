@@ -2,11 +2,12 @@
 let computerChoice;
 let playerChoice;
 
-function cpuChoice(){
+//creates a random selection for Rock paper or scissor 
+function getCpuChoice(){
 let ranSelection;
-  let num = Math.random() * 100;
+let num = Math.random() * 100;
  
-  if(num <33) {
+  if(num <=33) {
   ranSelection = "rock";
   } else if (num >= 67) {
   ranSelection = "paper";
@@ -18,6 +19,10 @@ let ranSelection;
   return ranSelection;
 }
 
-/* computerChoice = cpuChoice(); */
+//assign random selection to computer 
+computerChoice = getCpuChoice(); 
 
-console.log(cpuChoice());
+//Allows player to enter their selection
+playerChoice = prompt("Enter your choice: Rock, paper, scissor").toLowerCase();
+
+console.log(playerChoice);
